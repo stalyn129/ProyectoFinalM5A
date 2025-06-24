@@ -1,0 +1,6 @@
+/* src/styles/global.css */
+@import './base/_base.css';
+@import './layout/_layout.css';
+@import './components/form.css';
+@import './pages/login.css';
+@import './pages/registro.css';

@@ -1,6 +1,18 @@
 import React from 'react';
-import ReactDOM from 'react-dom/client';
-import App from './App';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import Login from './view/Login';
+import './styles/global.css';
+import Registrarse from './view/Registrarse';
 
-const root = ReactDOM.createRoot(document.getElementById('root'));
-root.render(<App />);
+function App() {
+  return (
+    <Router>
+      <Routes>
+        <Route path="/" element={<Login />} />
+        <Route path="/registrarse" element={<Registrarse />} />
+      </Routes>
+    </Router>
+  );
+}
+
+export default App;

@@ -1,0 +1,23 @@
+/* ===== Reset básico ===== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  /* ===== Tipografía global ===== */
+  body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #f4f6f9;
+    color: #333;
+  }
+  
+  /* ===== Variables de colores (opcional con :root) ===== */
+  :root {
+    --color-principal: #4CAF50;
+    --color-secundario: #1976d2;
+    --color-texto: #333;
+    --color-fondo: #ffffff;
+    --color-error: #e74c3c;
+  }
+  

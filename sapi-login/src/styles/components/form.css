@@ -1,0 +1,32 @@
+/* Inputs */
+input, select, textarea {
+    padding: 0.75rem;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    font-size: 1rem;
+    width: 100%;
+  }
+  
+  /* Botones */
+  button {
+    background-color: var(--color-principal);
+    color: white;
+    border: none;
+    border-radius: 8px;
+    padding: 0.75rem 1rem;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background 0.3s ease;
+  }
+  
+  button:hover {
+    background-color: #388e3c;
+  }
+  
+  /* Errores */
+  .error-texto {
+    color: var(--color-error);
+    font-size: 0.9rem;
+    margin-top: -0.5rem;
+  }
+  

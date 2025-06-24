@@ -1,0 +1,22 @@
+/* Layout general */
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  /* Header y footer genéricos */
+  .header {
+    background-color: var(--color-principal);
+    padding: 1rem;
+    color: white;
+    text-align: center;
+  }
+  
+  .footer {
+    background-color: #eee;
+    padding: 1rem;
+    text-align: center;
+    font-size: 0.85rem;
+  }
+      

@@ -1,17 +1,27 @@
 import React, { useState } from 'react';
-import '../components/Login.css';
-import logo from '../assets/sapi-logo.png'; // ✅ Ruta corregida
+import logo from '../assets/sapi-logo.jpg';
 import { Link } from 'react-router-dom';
-
 
 const Login = () => {
   const [usuario, setUsuario] = useState('');
   const [clave, setClave] = useState('');
+  const [error, setError] = useState('');
 
   const manejarEnvio = (e) => {
     e.preventDefault();
-    console.log('Usuario:', usuario);
-    console.log('Clave:', clave);
+
+    if (!usuario || !clave) {
+      setError('Todos los campos son obligatorios');
+      return;
+    }
+
+    // Simulación de autenticación (reemplazar con API)
+    console.log('Autenticando usuario:', usuario, clave);
+
+    // Limpieza
+    setError('');
+    setUsuario('');
+    setClave('');
   };
 
   return (
@@ -19,6 +29,8 @@ const Login = () => {
       <div className="login-left">
         <form className="login-form" onSubmit={manejarEnvio}>
           <h2>INICIAR SESIÓN</h2>
+
+          {error && <p className="error-texto">{error}</p>}
 
           <label htmlFor="usuario">Usuario / Mawkak</label>
           <input
@@ -39,17 +51,19 @@ const Login = () => {
           />
 
           <button type="submit">Iniciar Sesión</button>
+
           <p className="login-texto">
             El veloz murciélago hindú comía feliz cardillo y kiwi. La cigüeña tocaba el saxofón...
           </p>
 
-          <Link to="/registrarse" className="link-registrar">Registrar / Killkakamay</Link>
-
+          <Link to="/registrarse" className="link-registrar">
+            Registrar / Killkakamay
+          </Link>
         </form>
       </div>
 
       <div className="login-right">
-        <img src={logo} alt="Logo SAPI" className="logo-sapi" /> {/* ✅ Uso correcto de la imagen */}
+        <img src={logo} alt="Logo SAPI" className="logo-sapi" />
       </div>
     </div>
   );
